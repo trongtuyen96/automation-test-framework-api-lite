@@ -23,8 +23,8 @@ public class TestAPIAction {
         setDescription("");
         setMethod("");
         setUrlTemplate("");
-        setTestParameters(new LinkedHashMap<String, Object>());
-        setResponseItems(new LinkedHashMap<String, Object>());
+        setTestParameters(new LinkedHashMap<>());
+        setResponseItems(new LinkedHashMap<>());
     }
 
     public TestAPIAction(String name, String description, String method, String urlTemplate) {
@@ -32,8 +32,8 @@ public class TestAPIAction {
         setDescription(description);
         setMethod(method);
         setUrlTemplate(urlTemplate);
-        setTestParameters(new LinkedHashMap<String, Object>());
-        setResponseItems(new LinkedHashMap<String, Object>());
+        setTestParameters(new LinkedHashMap<>());
+        setResponseItems(new LinkedHashMap<>());
     }
 
     public TestAPIAction(TestAPIAction apiAction) {
@@ -119,5 +119,4 @@ public class TestAPIAction {
         testParameters.clear();
         responseItems.clear();
     }
-
 }
