@@ -174,7 +174,7 @@ public class BaseTestExecution {
     protected TestSuite loadTestSuiteFromJSON(String testDataPath) {
         LinkedHashMap<String, Object> map = new LinkedHashMap<>();
         map.put("jsonPath", testDataPath);
-        JSONObject jsonObject = JSONHandler.loadJSONFile(TEST_DATA_FOLDER + "api/" + map.get("jsonPath"));
+        JSONObject jsonObject = JSONHandler.loadJSONFile(TEST_DATA_FOLDER + map.get("jsonPath"));
         TestSuite testSuite = new TestSuite((String) jsonObject.get("suiteName"), (String) jsonObject.get("suiteDescription"));
 
         JSONArray testCases = (JSONArray) JSONHandler.getValueOfJSONObject(jsonObject, "testCases");

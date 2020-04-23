@@ -10,7 +10,7 @@ public class Config {
         Properties properties = new Properties();
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream(new File("src\\test\\java\\config.properties"));
+            fileInputStream = new FileInputStream(new File("src\\test\\java\\config\\config.properties"));
             properties.load(fileInputStream);
             fileInputStream.close();
         } catch (IOException e) {

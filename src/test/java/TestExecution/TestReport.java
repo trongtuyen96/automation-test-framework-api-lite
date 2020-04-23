@@ -80,10 +80,9 @@ public class TestReport {
 
     public void addTestCase(String name, String description, String... categories) {
         // Create node
-        ThreadLocal<ExtentTest> curSuite = new ThreadLocal<>();
-        curSuite.set(extentReports.createTest(name, description));
-        curSuite.get().assignCategory(categories);
-        testSuites.add(curSuite);
+        ExtentTest curTest = testSuites.get(testSuites.size() - 1).get().createNode(name, description);
+        test.set(curTest);
+        test.get().assignCategory(categories);
     }
 
     public void addTestSuite(String name, String description, String... categories) {
