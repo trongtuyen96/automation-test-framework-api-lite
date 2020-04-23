@@ -52,6 +52,8 @@ public class APIActionExecution {
     }
 
     public void loadVariables() {
+        testAPIAction.setName((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getName(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
+        testAPIAction.setDescription((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getDescription(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
         testAPIAction.setUrlTemplate((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getUrlTemplate(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
 
         testAPIAction.setResponseItems(HashMapHandler.replaceVariableWithDataMap(testAPIAction.getResponseItems(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));

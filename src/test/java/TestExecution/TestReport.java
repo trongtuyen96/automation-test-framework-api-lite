@@ -86,6 +86,14 @@ public class TestReport {
         testSuites.add(curSuite);
     }
 
+    public void addTestSuite(String name, String description, String... categories) {
+        // Create test
+        ThreadLocal<ExtentTest> curSuite = new ThreadLocal<>();
+        curSuite.set(extentReports.createTest(name, description));
+        curSuite.get().assignCategory(categories);
+        testSuites.add(curSuite);
+    }
+
     public String getLastTestSuiteName() {
         return testSuites.size() > 0 ? testSuites.get(testSuites.size() - 1).get().getModel().getName() : null;
     }
