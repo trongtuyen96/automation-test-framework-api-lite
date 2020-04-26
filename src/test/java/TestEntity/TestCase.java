@@ -9,7 +9,7 @@ public class TestCase implements Cloneable {
     private String description;
     private String objective;
     private Boolean isActive;
-    private ArrayList<TestAPIAction> testActions;
+    private ArrayList<TestStep> testSteps;
 
     public TestCase() {
         setId("");
@@ -17,7 +17,7 @@ public class TestCase implements Cloneable {
         setDescription("");
         setObjective("");
         setActive(true);
-        setTestActions(new ArrayList<>());
+        setTestSteps(new ArrayList<>());
     }
 
     public TestCase(String id, String name, String description, String objective, Boolean isActive) {
@@ -26,7 +26,7 @@ public class TestCase implements Cloneable {
         setDescription(description);
         setObjective(objective);
         setActive(isActive);
-        setTestActions(new ArrayList<>());
+        setTestSteps(new ArrayList<>());
     }
 
     public String getId() {
@@ -73,12 +73,12 @@ public class TestCase implements Cloneable {
         }
     }
 
-    public ArrayList<TestAPIAction> getTestActions() {
-        return testActions;
+    public ArrayList<TestStep> getTestSteps() {
+        return testSteps;
     }
 
-    public void setTestActions(ArrayList<TestAPIAction> testActions) {
-        this.testActions = testActions;
+    public void setTestSteps(ArrayList<TestStep> testSteps) {
+        this.testSteps = testSteps;
     }
 
     public void clear() {
@@ -87,9 +87,9 @@ public class TestCase implements Cloneable {
         setDescription("");
         setObjective("");
         setActive(null);
-        for (TestAPIAction action : testActions) {
+        for (TestStep action : testSteps) {
             action.clear();
         }
-        testActions.clear();
+        testSteps.clear();
     }
 }

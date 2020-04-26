@@ -1,6 +1,6 @@
 package TestExecution;
 
-import TestEntity.TestAPIAction;
+import TestEntity.TestStep;
 import TestEntity.TestCase;
 import TestEntity.TestSuite;
 import Utils.DateTimeHandler;
@@ -25,7 +25,7 @@ import java.util.LinkedHashMap;
 public class BaseTestExecution {
     protected static String TEST_DATA_FOLDER = Config.getProperty("testDataFolder");
     protected LinkedHashMap<String, TestSuite> testSuiteMap = new LinkedHashMap<>();
-    private APIActionExecution apiActionExecution;
+    private APIExecution apiExecution;
 
     @BeforeSuite
     public void beforeSuite() {
@@ -120,7 +120,7 @@ public class BaseTestExecution {
     }
 
     private void logTestResultNotPass(ITestResult result) {
-        String log = apiActionExecution.getOutputWriter().toString();
+        String log = apiExecution.getOutputWriter().toString();
         Reporter.log(log, true);
 
         switch (result.getStatus()) {
@@ -142,15 +142,15 @@ public class BaseTestExecution {
         TestCase currentTC = (TestCase) testCaseInfo[0];
         if (currentTC.getActive()) {
             int count = 0;
-            for (TestAPIAction action : currentTC.getTestActions()) {
-                String log = "<b><font color=\"blue\"><h6><u>Action " + ++count + "</u></h6></font> " + (action.getName() != null ? action.getName() : "") + "</b>"
-                        + "<br><b><font color=\"blue\">method</font>: " + action.getMethod() + "</b>";
+            for (TestStep testStep : currentTC.getTestSteps()) {
+                String log = "<b><font color=\"blue\"><h6><u>Step " + ++count + "</u></h6></font> " + (testStep.getName() != null ? testStep.getName() : "") + "</b>"
+                        + "<br><b><font color=\"blue\">Method</font>: " + testStep.getMethod() + "</b>";
                 TestReport.getInstance().testLog(Status.INFO, log);
 
-                apiActionExecution = new APIActionExecution(action);
-                stepResult = apiActionExecution.doExecution();
+                apiExecution = new APIExecution(testStep);
+                stepResult = apiExecution.doExecution();
 
-                log = "<br>" + apiActionExecution.getOutputWriter();
+                log = "<br>" + apiExecution.getOutputWriter();
                 if (stepResult) {
                     TestReport.getInstance().testPass(log);
                 } else {
@@ -194,22 +194,23 @@ public class BaseTestExecution {
                 (String) jsonTestCase.get("testObjective"),
                 (Boolean) jsonTestCase.get("isActive"));
 
-        JSONArray testActions = (JSONArray) jsonTestCase.get("testActions");
-        for (Object testAction : testActions) {
-            JSONObject jsonAction = (JSONObject) testAction;
-            JSONObject params = (JSONObject) jsonAction.get("parameters");
+        JSONArray testSteps = (JSONArray) jsonTestCase.get("testSteps");
+        for (Object testStep : testSteps) {
+            JSONObject jsonStep = (JSONObject) testStep;
+            JSONObject params = (JSONObject) jsonStep.get("parameters");
 
-            TestAPIAction apiAction = new TestAPIAction((String) jsonAction.get("name"),
-                    (String) jsonAction.get("description"),
-                    (String) jsonAction.get("method"),
-                    (String) params.get("urlTemplate"));
+            TestStep apiStep = new TestStep((String) jsonStep.get("name"),
+                    (String) jsonStep.get("description"),
+                    (String) jsonStep.get("method"),
+                    (String) params.get("url"));
 
-            JSONObject testParams = JSONHandler.getJSONObject(params, "testParams");
-            apiAction.putAPITestParam(TestAPIAction.TestParameterType.Path, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(testParams, "path")));
-            apiAction.putAPITestParam(TestAPIAction.TestParameterType.Query, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(testParams, "query")));
-            apiAction.putAPITestParam(TestAPIAction.TestParameterType.Body, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(testParams, "body")));
-            apiAction.getResponseItems().putAll(HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(params, "response")));
-            testCase.getTestActions().add(apiAction);
+            JSONObject request = JSONHandler.getJSONObject(params, "request");
+            apiStep.putAPITestParam(TestStep.TestParameterType.Path, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(request, "path")));
+            apiStep.putAPITestParam(TestStep.TestParameterType.Query, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(request, "query")));
+            apiStep.putAPITestParam(TestStep.TestParameterType.Body, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(request, "body")));
+            apiStep.putAPITestParam(TestStep.TestParameterType.Header, HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(request, "header")));
+            apiStep.getResponse().putAll(HashMapHandler.convertJSONObjectToHashMap(JSONHandler.getJSONObject(params, "response")));
+            testCase.getTestSteps().add(apiStep);
         }
         return testCase;
     }

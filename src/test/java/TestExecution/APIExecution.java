@@ -1,6 +1,6 @@
 package TestExecution;
 
-import TestEntity.TestAPIAction;
+import TestEntity.TestStep;
 import Utils.HashMapHandler;
 import Utils.UtilityFunctions;
 import config.Config;
@@ -28,7 +28,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class APIActionExecution {
+public class APIExecution {
     private StringWriter actionInfoWriter;
 
     private StringWriter requestWriter;
@@ -38,10 +38,10 @@ public class APIActionExecution {
     private static PrintStream responseCapture;
 
     private ValidatableResponse validatableRes;
-    private TestAPIAction testAPIAction;
+    private TestStep testAPIAction;
     private List<AssertionError> errors = new ArrayList<AssertionError>();
 
-    public APIActionExecution(TestAPIAction tAction) {
+    public APIExecution(TestStep tAction) {
         this.testAPIAction = tAction;
         setUpAPITest();
     }
@@ -54,11 +54,11 @@ public class APIActionExecution {
     public void loadVariables() {
         testAPIAction.setName((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getName(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
         testAPIAction.setDescription((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getDescription(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
-        testAPIAction.setUrlTemplate((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getUrlTemplate(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
+        testAPIAction.setUrl((String) UtilityFunctions.replaceVariableWithVariableMap(testAPIAction.getUrl(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
 
-        testAPIAction.setResponseItems(HashMapHandler.replaceVariableWithDataMap(testAPIAction.getResponseItems(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
+        testAPIAction.setResponse(HashMapHandler.replaceVariableWithDataMap(testAPIAction.getResponse(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
 
-        testAPIAction.setTestParameters(HashMapHandler.replaceVariableWithDataMap(testAPIAction.getTestParameters(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
+        testAPIAction.setRequest(HashMapHandler.replaceVariableWithDataMap(testAPIAction.getRequest(), "@var->", "@", TestVariableMap.getInstance().getCommonVariables()));
     }
 
     public void setUpAPITest() {
@@ -96,18 +96,24 @@ public class APIActionExecution {
         return formatErrorsString.toString();
     }
 
-    private boolean runAPIAction(TestAPIAction ta) {
+    private boolean runAPIAction(TestStep ta) {
         RestAssured.basePath = ta.getUrl();
-        LinkedHashMap<String, Object> queryParams = null, bodyParams = null;
-        Map<String, Object> testParams = ta.getTestParameters();
+        LinkedHashMap<String, Object> queryParams = null, bodyParams = null, headers = null;
+        Map<String, Object> testParams = ta.getRequest();
 
         // Get parameters of test action
-        queryParams = (LinkedHashMap<String, Object>) testParams.get(TestAPIAction.TestParameterType.Query.toString());
-        bodyParams = (LinkedHashMap<String, Object>) testParams.get(TestAPIAction.TestParameterType.Body.toString());
-        Map<String, Object> expResponseItems = ta.getResponseItems();
+        headers = (LinkedHashMap<String, Object>) testParams.get(TestStep.TestParameterType.Header.toString());
+        queryParams = (LinkedHashMap<String, Object>) testParams.get(TestStep.TestParameterType.Query.toString());
+        bodyParams = (LinkedHashMap<String, Object>) testParams.get(TestStep.TestParameterType.Body.toString());
+        Map<String, Object> expResponseItems = ta.getResponse();
 
         // Write text for action info writer
-        String stepText = "<br>" + "<br>Query Params: </br>";
+        String headerText = "<br>" + "<br>Headers: </br>";
+        for (Map.Entry<String, Object> entry : headers.entrySet()) {
+            headerText += "<br>" + "- " + entry.getKey() + ":" + entry.getValue();
+        }
+
+        String stepText = "<br>" + "<br>Query: </br>";
         for (Map.Entry<String, Object> entry : queryParams.entrySet()) {
             stepText += "<br>" + "- " + entry.getKey() + ":" + entry.getValue();
         }
@@ -116,16 +122,16 @@ public class APIActionExecution {
         // Run test method
         switch (ta.getMethod().toLowerCase()) {
             case "get":
-                runGetRequest(ContentType.JSON, queryParams, expResponseItems);
+                runGetRequest(ContentType.JSON, headers, queryParams, expResponseItems);
                 break;
             case "post":
-                runPostRequest(ContentType.JSON, queryParams, bodyParams, expResponseItems);
+                runPostRequest(ContentType.JSON, headers, queryParams, bodyParams, expResponseItems);
                 break;
             case "put":
-                runPutRequest(ContentType.JSON, queryParams, bodyParams, expResponseItems);
+                runPutRequest(ContentType.JSON, headers, queryParams, bodyParams, expResponseItems);
                 break;
             case "delete":
-                runDeleteRequest(ContentType.JSON, queryParams, expResponseItems);
+                runDeleteRequest(ContentType.JSON, headers, queryParams, expResponseItems);
                 break;
             default:
                 return false;
@@ -134,23 +140,23 @@ public class APIActionExecution {
     }
 
     // ==================== Run Method Request ==================== //
-    private void runGetRequest(ContentType contentType, Map<String, Object> queryParams, Map<String, Object> expectedItems) {
-        ResponseOptions responseOptions = executeGetMethod(contentType, queryParams);
+    private void runGetRequest(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams, Map<String, Object> expectedItems) {
+        ResponseOptions responseOptions = executeGetMethod(contentType, headers, queryParams);
         validateResponse((Response) responseOptions, expectedItems);
     }
 
-    private void runPostRequest(ContentType contentType, Map<String, Object> queryParams, Map<String, Object> bodyParams, Map<String, Object> expectedItems) {
-        ResponseOptions responseOptions = executePostMethod(contentType, queryParams, bodyParams);
+    private void runPostRequest(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams, Map<String, Object> bodyParams, Map<String, Object> expectedItems) {
+        ResponseOptions responseOptions = executePostMethod(contentType, headers, queryParams, bodyParams);
         validateResponse((Response) responseOptions, expectedItems);
     }
 
-    private void runPutRequest(ContentType contentType, Map<String, Object> queryParams, Map<String, Object> bodyParams, Map<String, Object> expectedItems) {
-        ResponseOptions responseOptions = executePutMethod(contentType, queryParams, bodyParams);
+    private void runPutRequest(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams, Map<String, Object> bodyParams, Map<String, Object> expectedItems) {
+        ResponseOptions responseOptions = executePutMethod(contentType, headers, queryParams, bodyParams);
         validateResponse((Response) responseOptions, expectedItems);
     }
 
-    private void runDeleteRequest(ContentType contentType, Map<String, Object> queryParams, Map<String, Object> expectedItems) {
-        ResponseOptions responseOptions = executeDeleteMethod(contentType, queryParams);
+    private void runDeleteRequest(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams, Map<String, Object> expectedItems) {
+        ResponseOptions responseOptions = executeDeleteMethod(contentType, headers, queryParams);
         validateResponse((Response) responseOptions, expectedItems);
     }
 
@@ -160,7 +166,7 @@ public class APIActionExecution {
         // storedParamValue here
         // Only on PRO version
 
-        expItems = testAPIAction.getResponseItems();
+        expItems = testAPIAction.getResponse();
         for (Map.Entry<String, Object> entry : expItems.entrySet()) {
             switch (entry.getKey()) {
                 case "statusCode":
@@ -185,7 +191,7 @@ public class APIActionExecution {
                         errors.add(e);
                     }
                     break;
-                case "bodyValue":
+                case "body":
                     JSONObject fieldValues = (JSONObject) entry.getValue();
                     for (Object fieldValue : fieldValues.keySet()) {
                         try {
@@ -307,9 +313,10 @@ public class APIActionExecution {
     }
 
     // ==================== Method Execution ==================== //
-    private ResponseOptions executeGetMethod(ContentType contentType, Map<String, Object> queryParams) {
+    private ResponseOptions executeGetMethod(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams) {
         RequestSpecification requestSpecification = given()
                 .contentType(contentType)
+                .headers(headers)
                 .filter(new RequestLoggingFilter(requestCapture))
                 .filter(new ResponseLoggingFilter(responseCapture))
                 .log().ifValidationFails();
@@ -321,9 +328,10 @@ public class APIActionExecution {
         return requestSpecification.when().get();
     }
 
-    private ResponseOptions executePostMethod(ContentType contentType, Map<String, Object> queryParams, Map<String, Object> bodyParams) {
+    private ResponseOptions executePostMethod(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams, Map<String, Object> bodyParams) {
         RequestSpecification requestSpecification = given()
                 .contentType(contentType)
+                .headers(headers)
                 .filter(new RequestLoggingFilter(requestCapture))
                 .filter(new ResponseLoggingFilter(responseCapture))
                 .log().ifValidationFails();
@@ -339,9 +347,10 @@ public class APIActionExecution {
         return requestSpecification.when().post();
     }
 
-    private ResponseOptions executePutMethod(ContentType contentType, Map<String, Object> queryParams, Map<String, Object> bodyParams) {
+    private ResponseOptions executePutMethod(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams, Map<String, Object> bodyParams) {
         RequestSpecification requestSpecification = given()
                 .contentType(contentType)
+                .headers(headers)
                 .filter(new RequestLoggingFilter(requestCapture))
                 .filter(new ResponseLoggingFilter(responseCapture))
                 .log().ifValidationFails();
@@ -357,9 +366,10 @@ public class APIActionExecution {
         return requestSpecification.when().put();
     }
 
-    private ResponseOptions executeDeleteMethod(ContentType contentType, Map<String, Object> queryParams) {
+    private ResponseOptions executeDeleteMethod(ContentType contentType, Map<String, Object> headers, Map<String, Object> queryParams) {
         RequestSpecification requestSpecification = given()
                 .contentType(contentType)
+                .headers(headers)
                 .filter(new RequestLoggingFilter(requestCapture))
                 .filter(new ResponseLoggingFilter(responseCapture))
                 .log().ifValidationFails();
