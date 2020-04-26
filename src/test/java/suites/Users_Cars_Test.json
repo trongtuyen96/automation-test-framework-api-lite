@@ -1,1 +1,25 @@
-{}
+{
+  "suiteName": "Users and Cars test suite",
+  "suiteDescription": "API for users and cars endpoints",
+  "testCases": [
+    {
+      "testId": "UC_1",
+      "testName": "Get all users",
+      "testDescription":"It should return all users",
+      "testObjective": "",
+      "testSteps": [{
+        "method": "GET",
+        "name": "Get all users",
+        "parameters": {
+          "url": "/user",
+          "request": {},
+          "response": {
+            "statusCode": 200,
+            "body":{
+            }
+          }
+        }
+      }]
+    }
+  ]
+}

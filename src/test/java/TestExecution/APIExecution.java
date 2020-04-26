@@ -66,7 +66,9 @@ public class APIExecution {
 
         // Load from config file
         RestAssured.baseURI = Config.getProperty("baseURI");
-        RestAssured.port = Integer.parseInt(Config.getProperty("port"));
+
+        // If there is a port
+        // RestAssured.port = Integer.parseInt(Config.getProperty("port"));
     }
 
     private void initLogWriter() {

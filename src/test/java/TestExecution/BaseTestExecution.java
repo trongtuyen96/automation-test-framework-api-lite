@@ -179,7 +179,7 @@ public class BaseTestExecution {
 
         JSONArray testCases = (JSONArray) JSONHandler.getValueOfJSONObject(jsonObject, "testCases");
         if (testCases != null) {
-            for (int i = 1; i < testCases.size(); i++) {
+            for (int i = 1; i <= testCases.size(); i++) {
                 JSONObject jsonTC = (JSONObject) testCases.get(i - 1);
                 testSuite.getTestCases().add(loadTestCaseFromJSON(jsonTC));
             }
