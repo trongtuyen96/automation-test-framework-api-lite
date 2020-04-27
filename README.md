@@ -11,36 +11,18 @@
 
 ## Table of Contents
 
-- [Key Example](#key-examples)
+- [Framework Architecture](#framework-architecture)
+- [How It Works](#how-it-works)
+- [Key Features](#key-features)
 - [How To Use](#how-to-use)
 - [Author](#author)
 - [License](#license)
 
-## Key Examples
+## Framework Architecture
 
-- Sample Test: 
-An example where setting up an chrome driver, run simple test and validate result.
+## How It Works
 
-- DataProvider Test: 
-Apply dataProvider annotation from TestNG to parameterized input data.
-
-- ExcelPOI Test: 
-Data-Driven with data read from Excel file, excel utilities provided.
-
-- MultiBrowser Test: 
-Execute test on multiple browsers, parallel run allowed.
-
-- ATWTT Test: 
-An test with test page (automatedtestingwithtuyen.com) were built following Page Object Model.
-
-- ATWTT Page Factory Test: 
-An test with test page (automatedtestingwithtuyen.com) were built following Page Factory.
-
-- ExtentReport Test: 
-Apply ExtentReport to generate beautiful, fully-detailed, well-organized result report. Fail screenshots captured.
-
-- Retry Analyzer Test: 
-Automatically retry to execute failed test cases.
+## Key Features
 
 ## How to use
 
