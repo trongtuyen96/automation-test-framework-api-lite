@@ -50,6 +50,22 @@
 
 ## Key Features
 
+1. Fully operational testing process that implemeneted Data-Driven Framework using json-format test cases as data source.
+
+2. Easy to learn, easy to understand, easy to create json test cases yourself with well-structured format.
+
+3. Built-in ExtentReport with best customized output reports for REST API testing.
+
+4. Implemented <a href="http://hamcrest.org/JavaHamcrest/javadoc/2.1/org/hamcrest/Matchers.html">Hamcrest Matchers</a> for validation of API response's value. For example: greater than, less than, has key, has item, not, is, equal to, every item, contains, ...
+
+5. Implemented <a href="http://rest-assured.io/">RestAssured</a> for comparing the actual response schema property with expected schema and making fully supported API request with content type, headers, body, ...
+
+6. Test cases executed with run-time variables or pre-defined variables. For example: "datetime" : @var->TODAY@, when the test case is executed, the value will be repaced as "datetime": "2020-02-20".
+
+7. Extended from TestNG for multi-thread test execution, parallel testing with running multiple set of test suite at the same time.
+
+8. Test execution from command line, which is super beneficial for CI/CD pipeline process.
+
 ## How to use
 
 ## Author
