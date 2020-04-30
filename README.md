@@ -11,14 +11,14 @@
 
 ## Table of Contents
 
-- [Framework Architecture](#framework-architecture)
+- [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Key Features](#key-features)
 - [How To Use](#how-to-use)
 - [Author](#author)
 - [License](#license)
 
-## Framework Architecture
+## Project Structure
 
 ## How It Works
 
