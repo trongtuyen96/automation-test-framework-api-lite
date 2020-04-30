@@ -19,7 +19,7 @@
 - [License](#license)
 
 ## Project Structure
-  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/project_structure.PNG" alt="project structure" width="50"></a>
+  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/project_structure.PNG" alt="project structure" width="400"></a>
 - reports: where the generated reports located.
 - execution: contains execution xml file to run the test. (Follow TestNG framework)
 - resources: contains schema file for schema validation.
