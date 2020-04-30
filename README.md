@@ -67,7 +67,11 @@
 8. Test execution from command line, which is super beneficial for CI/CD pipeline process.
 
 ## How to use
-
+#### Write basic test case
+#### Validate response value
+#### Use variables
+#### Execute test
+#### Command line execution
 ## Author
 
 <h4 align="center">
