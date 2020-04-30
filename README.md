@@ -31,21 +31,22 @@
 
 ## How It Works
  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/architecture.PNG" alt="architecture"></a>
-Execution xml file is used to trigger the test and specify the json test case data to run.
+ 
+1. Execution xml file is used to trigger the test and specify the json test case data to run.
 
-1. The framework read and get the test case data from json file, map it into test suite (a set of test cases).
+2. The framework read and get the test case data from json file, map it into test suite (a set of test cases).
 
-2. Each test case will be executed with corresponding method (GOT, POST, PUT, DELTE), request headers, body.
+3. Each test case will be executed with corresponding method (GOT, POST, PUT, DELTE), request headers, body.
 
-3. The response will be stored and validated with the expected status code, values or schemas.
+4. The response will be stored and validated with the expected status code, values or schemas.
 
-4. The test result of test cases is stored and written into test report.
+5. The test result of test cases is stored and written into test report.
 
-5. The whole process of execute test case is iterated until no test cases left.
+6. The whole process of execute test case is iterated until no test cases left.
 
-6. The whole process of execute test suite is iterated until no test suites left (since an execution xml file may specify more than 1 test data json file).
+7. The whole process of execute test suite is iterated until no test suites left (since an execution xml file may specify more than 1 test data json file).
 
-7. The total result is written into report.
+8. The total result is written into report.
 
 ## Key Features
 
