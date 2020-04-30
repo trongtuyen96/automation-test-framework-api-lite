@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="754ebc02-75d2-478c-a6f7-4f33c9f38a63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" afterDir="false" />
-    </list>
+    <list default="true" id="754ebc02-75d2-478c-a6f7-4f33c9f38a63" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="181" column="32" selection-start-line="181" selection-start-column="32" selection-end-line="181" selection-end-column="32" />
+            <state relative-caret-position="235">
+              <caret line="182" selection-start-line="182" selection-end-line="182" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/execution/atwt-api.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+            <state relative-caret-position="119">
+              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -54,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -81,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="143">
@@ -135,8 +129,9 @@
       <find>testSteps&quot;</find>
       <find>&quot;port</find>
       <find>classPa</find>
-      <find>getTestData</find>
       <find>port&quot;</find>
+      <find>getTestData</find>
+      <find>tag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,9 +156,9 @@
         <option value="$PROJECT_DIR$/src/test/java/TestExecution/APIActionExecution.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestEntity/TestCase.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java" />
-        <option value="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" />
         <option value="$PROJECT_DIR$/src/test/java/config/config.properties" />
         <option value="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" />
+        <option value="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" />
       </list>
     </option>
   </component>
@@ -264,7 +259,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587919279138" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587919310060" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AutomationTestingFramework" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -321,12 +316,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 24m 38s.xml">
-      <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 25m 38s.xml">
-      <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 27m 15s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
@@ -351,12 +340,17 @@
     <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 36m 10s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 38m 48s.xml">
+      <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 39m 33s.xml">
+      <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="985" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19351351" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36864865" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -365,7 +359,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.561707" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16147636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39215687" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,24 +410,6 @@
           <line>214</line>
           <properties />
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>180</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>181</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>182</line>
-          <properties />
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -577,30 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="181" column="32" selection-start-line="181" selection-start-column="32" selection-end-line="181" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/execution/atwt-api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -625,6 +577,30 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/execution/atwt-api.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
