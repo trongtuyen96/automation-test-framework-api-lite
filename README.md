@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <a href="background"><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/ATWT_background.PNG" alt="background"></a>
-    <a href="background"><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/rest_api_lite_badge.png" alt="background"></a>
+  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/ATWT_background.PNG" alt="background"></a>
+    <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/rest_api_lite_badge.png" alt="background"></a>
   <br>
   Automation API Test Framework - Lite Version
   <br>
@@ -19,6 +19,15 @@
 - [License](#license)
 
 ## Project Structure
+  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/project-structure.PNG" alt="background"></a>
+- reports: where the generated reports located.
+- execution: contains execution xml file to run the test. (Follow TestNG framework)
+- resources: contains schema file for schema validation.
+- config: contains config file for url, port, extent report config, ...
+- suites: contains test cases groups by suites.
+- TestEntity: contains test object including test suite, test case, test step.
+- TestExecution: functions and methods to execute the test.
+- Utils: some additional functions written here.
 
 ## How It Works
 
