@@ -30,7 +30,7 @@
 - Utils: some additional functions written here.
 
 ## How It Works
- <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/architecture.PNG" alt="architecture" width="900"></a>
+<h1 align="center"><a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/architecture.PNG" alt="architecture" width="800"></a></h1>
  
 1. Execution xml file is used to trigger the test and specify the json test case data to run.
 
