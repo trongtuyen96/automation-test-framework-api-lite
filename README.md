@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/ATWT_background.PNG" alt="background"></a>
-    <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/rest_api_lite_badge.png" alt="background"></a>
+    <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/rest_api_lite_badge.png" alt="rest api badge"></a>
   <br>
   Automation API Test Framework - Lite Version
   <br>
@@ -19,7 +19,7 @@
 - [License](#license)
 
 ## Project Structure
-  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/project-structure.PNG" alt="background"></a>
+  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/project_structure.PNG" alt="project structure"></a>
 - reports: where the generated reports located.
 - execution: contains execution xml file to run the test. (Follow TestNG framework)
 - resources: contains schema file for schema validation.
