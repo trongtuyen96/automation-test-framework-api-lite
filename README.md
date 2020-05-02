@@ -19,6 +19,7 @@
 
 ## Project Structure
   <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/project_structure.PNG" alt="project structure" width="250"></a>
+
 - reports: where the generated reports located.
 - execution: contains execution xml file to run the test (follow TestNG framework).
 - resources: contains schema file for schema validation.
@@ -149,6 +150,7 @@ Some available built-in variables in project:
 #### Execute test
 Test execution methodology is powered by TestNG, it requires the xml execution file, which is under execution folder.
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_3.PNG" alt="example 3"></a>
+
 Specify the test case json file that has been created under suite folder.
 Run the xml file for running the test. Use Ctrl + Shift + F10 in the case of IntelliJ IDEA.
 
