@@ -82,12 +82,8 @@
               "statusCode": 200,
               "schemaPath": "schemas\\post_user.json",
               "body": {
-                "email": {
-                  "is": "@var->TODAY@-user@mail.com"
-                },
-                "name": {
-                  "is": "Tester"
-                }
+                "email": {"is": "@var->TODAY@-user@mail.com"},
+                "name": {"is": "Tester"}
               }
             }
           }

@@ -66,6 +66,6 @@ public class TestVariableMap {
         commonVariables.put("RANDOM_numeric_5", Integer.parseInt(RandomStringUtils.randomNumeric(5)));
 
         // Random with alphabet
-        commonVariables.put("RANDOM_alphabetic_5", RandomStringUtils.randomAlphabetic(5));
+        commonVariables.put("Return ", RandomStringUtils.randomAlphabetic(5));
     }
 }
