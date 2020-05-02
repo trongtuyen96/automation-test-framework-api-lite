@@ -10,7 +10,6 @@
 <h3 align="center" style="bold">An automation testing framework for REST API using <a href="https://testng.org/">TestNG</a>, <a href="http://rest-assured.io/">RestAssured</a>, <a href="https://www.automatedtestingwithtuyen.com/post/data-driven-testing-framework">Data-Driven</a>, <a href="https://extentreports.com/">ExtentReport</a>.</h3>
 
 ## Table of Contents
-
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Key Features](#key-features)
@@ -49,7 +48,6 @@
 8. The total result is written into report.
 
 ## Key Features
-
 1. Fully operational testing process that implemeneted Data-Driven Framework using json-format test cases as data source.
 
 2. Easy to learn, easy to understand, easy to create json test cases yourself with well-structured format.
@@ -69,7 +67,8 @@
 ## How to use
 #### Write basic test case
 Create a new json file with structure as below description, place it under suites folder:
-  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_1.PNG" alt="example 1" width="250"></a>
+<a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_1.PNG" alt="example 1"></a>
+
 - suiteName: Name of the suite.
 - suiteDescription: Description of the suite.
 - testId: ID of the test case.
@@ -86,11 +85,59 @@ Create a new json file with structure as below description, place it under suite
 - body: Hamcrest Matchers method for validation.
 
 #### Validate response value
-#### Use variables
-#### Execute test
-#### Command line execution
-## Author
+There 3 type of validation of the response: status code, schema and body value.
+- statusCode: The expected status code of the response. Ex: 200, 201, 404, 500, ...
+- schemaPath: The path to the schema file. The schema file is located in resources/schemas folder.
+- body: Based on Hamcrest Matcher functions. 
+Ex1: To compare value of field name is equal to Tester, the below script is used:
+"name": {"is": "Tester"} 
+where "is" is one of the functions of Hamcrest Matchers.
 
+Ex2: To compare value of field count is greater than 5, the below script is used:
+"count": {"greaterThan": 5} 
+where "greaterThan" is one of the functions of Hamcrest Matchers.
+
+More Hamcrest Matchers functions can be built by coding yourself.
+Some available built-in matchers in project:
+	1. equalTo: Compare if logically equal to expected value.
+	2. equalToIgnoringCase: Compare if equal to expected value ignoring the case of characters.
+	3. everyItem: Compare every item of response.
+	4. greaterThan: Compare if greater than the expected value.
+	5. greaterThanOrEqual: Compare if greater than or equal the expected value.
+	6. lessThan: Compare if less than the expected value.
+	7. lessThanOrEqual: Compare if less than or equal the expected value.
+	8. hasItem: Compare if the response has the expected item.
+	9. not: Invert the logic.
+
+#### Use variables
+Variable is generated at runtime. The structure is @var-> <name of the variable> @.
+Here is the example of using TODAY value, which can prevent causing the error of creating duplicate emails.
+<a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_2.PNG" alt="example 2"></a>
+
+Some available built-in variables in project:
+	1. TODAY: Today string.
+	2. NOW_HH:mm: Now string format.
+	4. NOW+1_HH:mm: Current hour +1 format.
+	4. TODAY_yyyy-MM-dd: Today string with yy-MM-dd format.
+	5. YESTERDAY_yyyy-MM-dd: Yesterday string with yy-MM-dd format.
+	6. TOMORROW_yyyy-MM-dd: Tomorrow string with yy-MM-dd format.
+	7. NEXTMONTH_yyyy-MM-dd: Next month date string with yy-MM-dd format.
+	8. RANDOM_alphanumeric_5: Random string of 5 alphanumeric.
+	9. RANDOM_numeric_5: Random string of 5 numeric.
+	10. RANDOM_alphabetic_5: Random string of 5 alphabet.
+	
+#### Execute test
+Test execution methodology is powered by TestNG, it requires the xml execution file, which is under execution folder.
+<a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_3.PNG" alt="example 3"></a>
+Specify the test case json file that has been created under suite folder.
+Run the xml file for running the test. Use Ctrl + Shift + F10 in the case of IntelliJ IDEA.
+
+#### Command line execution
+Powered by Maven plugins.
+<a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_4.PNG" alt="example 4"></a>
+Format: mvn clean test -DtestSuiteName="<path to execution file>"
+
+## Author
 <h4 align="center">
 	Tuyen Nguyen - QA Automation Engineer
 	</h4>
@@ -110,7 +157,6 @@ Create a new json file with structure as below description, place it under suite
 </p>
 
 ## License
-
 ~~~~
 Copyright 2020 Tuyen Nguyen
 
