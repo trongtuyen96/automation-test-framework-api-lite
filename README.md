@@ -70,7 +70,7 @@
 #### Write basic test case
 Create a new json file with structure as below description, place it under suites folder:
 
-<a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_1.PNG" alt="example 1" width="500"></a>
+<a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_1.PNG" alt="example 1"></a>
 
 - suiteName: Name of the suite.
 - suiteDescription: Description of the suite.
