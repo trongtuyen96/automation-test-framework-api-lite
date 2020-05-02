@@ -68,6 +68,22 @@
 
 ## How to use
 #### Write basic test case
+Create a new json file with structure as below description, place it under suites folder:
+  <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_1.PNG" alt="example 1" width="250"></a>
+- suiteName: Name of the suite.
+- suiteDescription: Description of the suite.
+- testId: ID of the test case.
+- testName: Name of the test case.
+- testDescription: Description of the test case.
+- testObjective: Objective of the test case.
+- method: Method of API request (GET/POST/PUT/DELETE).
+- name: Name of the test step.
+- url: URL to the endpoints (only specify the route since the base URL had been specified).
+- request: The request section, may contain path, query parameters, body request, headers.
+- response: The expected result or validation.
+- statusCode: The expected status code of return response.
+- schemaPath: The path to the expected schema that will be used to compare with actual response schema.
+- body: Hamcrest Matchers method for validation.
 
 #### Validate response value
 #### Use variables
