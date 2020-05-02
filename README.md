@@ -92,11 +92,15 @@ There 3 type of validation of the response: status code, schema and body value.
 - body: Based on Hamcrest Matcher functions. 
 
 Ex1: To compare value of field name is equal to Tester, the below script is used:
+
 "name": {"is": "Tester"} 
+
 where "is" is one of the functions of Hamcrest Matchers.
 
 Ex2: To compare value of field count is greater than 5, the below script is used:
+
 "count": {"greaterThan": 5} 
+
 where "greaterThan" is one of the functions of Hamcrest Matchers.
 
 More Hamcrest Matchers functions can be built by coding yourself.
