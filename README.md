@@ -68,6 +68,7 @@
 
 ## How to use
 #### Write basic test case
+
 #### Validate response value
 #### Use variables
 #### Execute test
