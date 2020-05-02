@@ -161,7 +161,7 @@ Powered by Maven plugins.
 
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_4.PNG" alt="example 4"></a>
 
-Format: mvn clean test -DtestSuiteName="<<path to execution file>>"
+Format: mvn clean test -DtestSuiteName="path to execution file"
 
 ## Author
 <h4 align="center">
