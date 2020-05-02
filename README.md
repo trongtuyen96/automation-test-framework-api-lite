@@ -126,6 +126,7 @@ Some available built-in matchers in project:
 
 #### Use variables
 Variable is generated at runtime. The structure is @var-> <name of the variable> @.
+
 Here is the example of using TODAY value, which can prevent causing the error of creating duplicate emails:
 
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_2.PNG" alt="example 2"></a>
