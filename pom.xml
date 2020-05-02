@@ -12,7 +12,7 @@
         <!-- This set compiler and make project build with java 1.8 language level 8-->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <testSuiteName>testng.xml</testSuiteName>
+        <testSuiteName>testBG.xml</testSuiteName>
     </properties>
 
     <build>

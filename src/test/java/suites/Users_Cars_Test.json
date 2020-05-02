@@ -5,21 +5,53 @@
     {
       "testId": "UC_1",
       "testName": "Get all users",
-      "testDescription":"It should return all users",
+      "testDescription": "It should return all users",
       "testObjective": "",
-      "testSteps": [{
-        "method": "GET",
-        "name": "Get all users",
-        "parameters": {
-          "url": "/user",
-          "request": {},
-          "response": {
-            "statusCode": 200,
-            "body":{
+      "testSteps": [
+        {
+          "method": "GET",
+          "name": "Get all users",
+          "parameters": {
+            "url": "/user",
+            "request": {},
+            "response": {
+              "statusCode": 200,
+              "schemaPath": "schemas\\get_user_ok.json",
+              "body": {
+                "every{it.containsKey('email')}": {
+                  "is": true
+                }
+              }
             }
           }
         }
-      }]
+      ]
+    },
+    {
+      "testId": "UC_2",
+      "testName": "Get specific user",
+      "testDescription": "It should return a user",
+      "testObjective": "",
+      "testSteps": [
+        {
+          "method": "GET",
+          "name": "Get all users",
+          "parameters": {
+            "url": "/user/{uniqueId}",
+            "request": {
+              "path": {
+                "uniqueId": "aaaaa"
+              }
+            },
+            "response": {
+              "statusCode": 500,
+              "body": {
+                "message": {"is": "Cast to ObjectId failed for value \"aaaaa\" at path \"_id\" for model \"user\""}
+              }
+            }
+          }
+        }
+      ]
     }
   ]
 }

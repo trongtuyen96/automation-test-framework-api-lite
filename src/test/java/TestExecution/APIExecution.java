@@ -40,6 +40,7 @@ public class APIExecution {
     private ValidatableResponse validatableRes;
     private TestStep testAPIAction;
     private List<AssertionError> errors = new ArrayList<AssertionError>();
+    private List<String> passTexts = new ArrayList<>();
 
     public APIExecution(TestStep tAction) {
         this.testAPIAction = tAction;
@@ -86,6 +87,7 @@ public class APIExecution {
         outputWriter.write("<pre>" + actionInfoWriter.toString() + "</pre>" + "<br>" +
                 "Request: <br><pre>" + requestWriter.toString() + "</pre>" + "<br>" +
                 "Response: <be><pre>" + responseWriter.toString() + "</pre>" + "<br>" +
+                formatPassTexts(passTexts) +
                 formatErrors());
         return outputWriter;
     }
@@ -96,6 +98,16 @@ public class APIExecution {
             formatErrorsString.append(String.format("<font color=\"red\"><b>Error %s:</b></font> <br><pre>%s</pre><br>", errors.size() != 1 ? i + 1 : "", errors.get(i)));
         }
         return formatErrorsString.toString();
+    }
+
+    private String formatPassTexts(List<String> passTexts) {
+        StringBuilder temp = new StringBuilder();
+        temp.append("<font color=\"green\"><b>Validation:</b></font><br><pre>");
+        for (int i = 1; i <= passTexts.size(); i++) {
+            temp.append(String.format("<font color=\"green\">%s</font>%s<br>", passTexts.size() != 1 ? i + ". " : "", passTexts.get(i - 1)));
+        }
+        temp.append("</pre>");
+        return temp.toString();
     }
 
     private boolean runAPIAction(TestStep ta) {
@@ -180,6 +192,7 @@ public class APIExecution {
                     }
                     try {
                         validatableRes.statusCode(status);
+                        passTexts.add("Ensure the status code is " + status);
                     } catch (AssertionError e) {
                         errors.add(e);
                     }
@@ -189,7 +202,7 @@ public class APIExecution {
                         // This auto find file from class path to below
                         // We can specify the directory by data\\api\\ + entry.getValue()
                         validatableRes.body(JsonSchemaValidator.matchesJsonSchemaInClasspath((String) entry.getValue()));
-                    } catch (AssertionError e) {
+                        passTexts.add("Ensure the response match with the schema at " + entry.getValue());                    } catch (AssertionError e) {
                         errors.add(e);
                     }
                     break;
@@ -201,6 +214,7 @@ public class APIExecution {
                             for (Object matcher : jsonMatchers.keySet()) {
                                 Matcher<?> refinedMatcher = buildMatcherPattern((String) matcher, jsonMatchers.get(matcher));
                                 validatableRes.body((String) fieldValue, refinedMatcher);
+                                passTexts.add("Ensure the field [" + fieldValue + "] - " + refinedMatcher.toString().replace("<","").replace(">","") + ".");
                             }
                         } catch (AssertionError e) {
                             errors.add(e);
@@ -213,25 +227,26 @@ public class APIExecution {
     }
 
     // ==================== Hamcrest Matcher ==================== //
-    private Matcher buildMatcherPattern(String matcherPattern, Object valueMatcher) {
-        Matcher refinedMatcher = null;
+    private Matcher<?> buildMatcherPattern(String matcherPattern, Object valueMatcher) {
+        Matcher<?> refinedMatcher = null;
 
         // handle for serial number of matcher pattern
-        matcherPattern = matcherPattern.indexOf('[') == 0 && matcherPattern.indexOf(']') > 0
-                ? matcherPattern.substring(matcherPattern.indexOf(']') + 1).trim()
-                : matcherPattern;
-
+        matcherPattern = matcherPattern.indexOf("[") == 0 && matcherPattern.indexOf(']') > 0
+                ?   matcherPattern.substring(matcherPattern.indexOf(']') + 1).trim()
+                :   matcherPattern;
         String[] funcParts = matcherPattern.split("\\.");
         if (valueMatcher instanceof Long) {
-            int value = ((Long) valueMatcher).intValue();
-            if (((Long) valueMatcher) == value) {
-                valueMatcher = value;
+            int val = ((Long) valueMatcher).intValue();
+            if (((Long) valueMatcher) == val) {
+                valueMatcher = val;
             }
         } else if (valueMatcher instanceof String) {
             valueMatcher = valueMatcher.toString();
         }
 
+
         for (int i = funcParts.length - 1; i >= 0; i--) {
+
             if (i == funcParts.length - 1) {
                 refinedMatcher = createMatcher(funcParts[i], valueMatcher);
             } else {
@@ -244,7 +259,7 @@ public class APIExecution {
         return refinedMatcher;
     }
 
-    private Matcher createMatcher(String funcName, Object value) {
+    private Matcher<?> createMatcher(String funcName, Object value) {
         switch (funcName) {
             case "containsIgnoringCase":
                 // Write extension for string
@@ -309,7 +324,7 @@ public class APIExecution {
                 // Write extension for string
                 return null;
             case "not":
-                return Matchers.not(value);
+                return Matchers.not((Matcher<?>) value);
         }
         return null;
     }

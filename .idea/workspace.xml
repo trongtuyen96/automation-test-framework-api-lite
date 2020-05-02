@@ -4,6 +4,8 @@
     <list default="true" id="754ebc02-75d2-478c-a6f7-4f33c9f38a63" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,10 +18,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/TestReport.java">
+        <entry file="file://$PROJECT_DIR$/src/test/execution/atwt-api.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1312">
-              <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+            <state relative-caret-position="136">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2873">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,10 +48,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Utils/JSONHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="492">
+              <caret line="216" column="156" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="156" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,28 +60,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Utils/UtilityFunctions.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestEntity/TestStep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/config/config.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/config/extentReportConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="9">
+              <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+              <folding>
+                <element signature="e#2403#2404#0" expanded="true" />
+                <element signature="e#2434#2435#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,58 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-473">
-              <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/TestVariableMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1221#1222#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/config/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Utils/DateTimeHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Utils/HashMapHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -139,7 +95,6 @@
       <find>createActionExecution</find>
       <find>@var</find>
       <find>test</find>
-      <find>bodyValue</find>
       <find>bodyV</find>
       <find>urlTemplate</find>
       <find>testActions</find>
@@ -152,6 +107,17 @@
       <find>port&quot;</find>
       <find>getTestData</find>
       <find>tag</find>
+      <find>schema</find>
+      <find>containsKey</find>
+      <find>schemaPath</find>
+      <find>size</find>
+      <find>validatableRes</find>
+      <find>passText</find>
+      <find>bodyValue</find>
+      <find>&quot;body&quot;</find>
+      <find>getResponse()</find>
+      <find>apiExecution</find>
+      <find>passTexts</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,10 +140,11 @@
         <option value="$PROJECT_DIR$/src/test/java/TestEntity/TestStep.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestExecution/APIActionExecution.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestEntity/TestCase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java" />
         <option value="$PROJECT_DIR$/src/test/java/config/config.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/schemas/get_user_ok.json" />
+        <option value="$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java" />
         <option value="$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json" />
+        <option value="$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -207,6 +174,11 @@
             <path>
               <item name="automation-test-framework-api-lite" type="b2602c69:ProjectViewProjectNode" />
               <item name="automation-test-framework-api-lite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="automation-test-framework-api-lite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automation-test-framework-api-lite" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="automation-test-framework-api-lite" type="b2602c69:ProjectViewProjectNode" />
@@ -287,7 +259,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588265896160" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588399293458" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AutomationTestingFramework" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -344,34 +316,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 27m 15s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.01 at 22h 10m 55s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 28m 15s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.01 at 22h 24m 20s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 31m 25s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 00h 36m 46s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 34m 10s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 06m 03s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 35m 03s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 28m 47s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 35m 14s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 43m 25s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 35m 46s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 44m 41s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 36m 10s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 48m 16s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 38m 48s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 54m 20s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.04.26 at 23h 39m 33s.xml">
+    <history-entry file="D__Study_automation-test-framework-api-lite_src_test_execution_atwt-api_xml - 2020.05.02 at 12h 54m 31s.xml">
       <configuration name="D:/Study/automation-test-framework-api-lite/src/test/execution/atwt-api.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -379,7 +351,7 @@
     <frame x="2873" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31728664" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.285558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -387,9 +359,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16147636" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39215687" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15109573" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28950405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -407,44 +379,38 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/TestReport.java</url>
-          <line>108</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>150</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>186</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java</url>
-          <line>214</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>refinedMatcher.toString().replace(&quot;&lt;&quot;,&quot;&quot;).replace(&quot;&gt;&quot;,&quot;&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>refinedMatcher.toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>validatableRes.body((String) fieldValue, refinedMatcher);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>validatableRes</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>refinedMatcher</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fieldValue</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>test.get()</expression-string>
         <language-id>JAVA</language-id>
@@ -460,16 +426,6 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>TestReport.getInstance()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>TestReport</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
@@ -481,38 +437,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/schemas/meter-autoreaders/get_meter-autoreaders/ok.json" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6953">
-          <caret line="452" selection-start-line="452" selection-end-line="452" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/execution/atwt-api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestEntity/TestCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestEntity/TestStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -530,45 +458,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/UtilityFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/config/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="182" selection-start-line="182" selection-end-line="182" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/TestReport.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/config/extentReportConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/TestVariableMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="544">
           <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1182#1183#0" expanded="true" />
             <element signature="e#1221#1222#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/HashMapHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="461" column="40" lean-forward="true" selection-start-line="461" selection-start-column="40" selection-end-line="461" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -582,19 +528,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/HashMapHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/schemas/get_user_ok.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="663">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar!/io/restassured/response/ValidatableResponseOptions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="112" column="6" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Utils/JSONHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="131">
           <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -602,41 +552,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/UtilityFunctions.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/TestReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="196">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3942#3943#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/config/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestEntity/TestStep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+        <state relative-caret-position="9">
+          <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+          <folding>
+            <element signature="e#2403#2404#0" expanded="true" />
+            <element signature="e#2434#2435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/BaseTestExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2873">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/config/config.properties">
+    <entry file="file://$PROJECT_DIR$/src/test/execution/atwt-api.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/config/extentReportConfig.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/suites/Users_Cars_Test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="10">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestExecution/APIExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="216" column="156" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="156" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-473">
-          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        <state relative-caret-position="238">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
         </state>
       </provider>
     </entry>
