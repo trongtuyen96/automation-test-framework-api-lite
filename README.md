@@ -123,6 +123,7 @@ Some available built-in matchers in project:
 #### Use variables
 Variable is generated at runtime. The structure is @var-> <name of the variable> @.
 Here is the example of using TODAY value, which can prevent causing the error of creating duplicate emails:
+
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_2.PNG" alt="example 2"></a>
 
 Some available built-in variables in project:
@@ -149,6 +150,7 @@ Some available built-in variables in project:
 	
 #### Execute test
 Test execution methodology is powered by TestNG, it requires the xml execution file, which is under execution folder.
+
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_3.PNG" alt="example 3"></a>
 
 Specify the test case json file that has been created under suite folder.
@@ -156,7 +158,9 @@ Run the xml file for running the test. Use Ctrl + Shift + F10 in the case of Int
 
 #### Command line execution
 Powered by Maven plugins.
+
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_4.PNG" alt="example 4"></a>
+
 Format: mvn clean test -DtestSuiteName="<path to execution file>"
 
 ## Author
