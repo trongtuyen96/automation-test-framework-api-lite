@@ -14,6 +14,7 @@
 - [How It Works](#how-it-works)
 - [Key Features](#key-features)
 - [How To Use](#how-to-use)
+- [Only On Pro Version](#only-on-pro-version)
 - [Author](#author)
 - [License](#license)
 
@@ -167,6 +168,23 @@ Powered by Maven plugins.
 <a><img src="https://github.com/trongtuyen96/automation-test-framework-api-lite/blob/master/covers/example_4.PNG" alt="example 4"></a>
 
 Format: mvn clean test -DtestSuiteName="path to execution file"
+
+## Only On Pro Version
+1. Extendability for variety of action-based type via action factory class.
+
+2. Executing script inside a test step.
+
+3. Combinations of mandaotry and optional query parameters to generate set of combined test cases.
+
+4. Data-drivenwith parameterized data table.
+
+5. Skip option for failed test steps, the next step is ongoing executed.
+
+6. Store process variables when executing the test cases at runtime.
+
+7. Load multiple json data file with one test class.
+
+8. Run the specific test cases only.
 
 ## Author
 <h4 align="center">
