@@ -3,6 +3,7 @@ package TestExecution;
 import TestEntity.TestStep;
 import Utils.HashMapHandler;
 import Utils.UtilityFunctions;
+import Utils.matcher_extension.CaseInsensitiveStringMatcher;
 import config.Config;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -202,7 +203,8 @@ public class APIExecution {
                         // This auto find file from class path to below
                         // We can specify the directory by data\\api\\ + entry.getValue()
                         validatableRes.body(JsonSchemaValidator.matchesJsonSchemaInClasspath((String) entry.getValue()));
-                        passTexts.add("Ensure the response match with the schema at " + entry.getValue());                    } catch (AssertionError e) {
+                        passTexts.add("Ensure the response match with the schema at " + entry.getValue());
+                    } catch (AssertionError e) {
                         errors.add(e);
                     }
                     break;
@@ -214,7 +216,7 @@ public class APIExecution {
                             for (Object matcher : jsonMatchers.keySet()) {
                                 Matcher<?> refinedMatcher = buildMatcherPattern((String) matcher, jsonMatchers.get(matcher));
                                 validatableRes.body((String) fieldValue, refinedMatcher);
-                                passTexts.add("Ensure the field [" + fieldValue + "] - " + refinedMatcher.toString().replace("<","").replace(">","") + ".");
+                                passTexts.add("Ensure the field [" + fieldValue + "] - " + refinedMatcher.toString().replace("<", "").replace(">", "") + ".");
                             }
                         } catch (AssertionError e) {
                             errors.add(e);
@@ -232,8 +234,8 @@ public class APIExecution {
 
         // handle for serial number of matcher pattern
         matcherPattern = matcherPattern.indexOf("[") == 0 && matcherPattern.indexOf(']') > 0
-                ?   matcherPattern.substring(matcherPattern.indexOf(']') + 1).trim()
-                :   matcherPattern;
+                ? matcherPattern.substring(matcherPattern.indexOf(']') + 1).trim()
+                : matcherPattern;
         String[] funcParts = matcherPattern.split("\\.");
         if (valueMatcher instanceof Long) {
             int val = ((Long) valueMatcher).intValue();
@@ -262,8 +264,7 @@ public class APIExecution {
     private Matcher<?> createMatcher(String funcName, Object value) {
         switch (funcName) {
             case "containsIgnoringCase":
-                // Write extension for string
-                return null;
+                return CaseInsensitiveStringMatcher.containsIgnoringCase(value.toString());
             case "equalTo":
                 if (value instanceof Double) {
                     return Matchers.equalTo(Float.valueOf(value.toString()));
@@ -292,8 +293,7 @@ public class APIExecution {
                 }
                 return Matchers.greaterThanOrEqualTo((Long) value);
             case "greaterThanOrEqualToIgnoringCase":
-                // Write extension for string
-                return null;
+                return CaseInsensitiveStringMatcher.greaterThanOrEqualToIgnoringCase((String) value);
             case "hasKey":
                 return Matchers.hasKey(value);
             case "hasItem":
@@ -321,8 +321,7 @@ public class APIExecution {
                 }
                 return Matchers.lessThanOrEqualTo((Long) value);
             case "lessThanOrEqualToIgnoringCase":
-                // Write extension for string
-                return null;
+                return CaseInsensitiveStringMatcher.lessThanOrEqualToIgnoringCase((String) value);
             case "not":
                 return Matchers.not((Matcher<?>) value);
         }
