@@ -176,7 +176,7 @@ Format: mvn clean test -DtestSuiteName="path to execution file"
 
 3. Combinations of mandaotry and optional query parameters to generate set of combined test cases.
 
-4. Data-drivenwith parameterized data table.
+4. Data-driven test cases with parameterized data table.
 
 5. Skip option for failed test steps, the next step is ongoing executed.
 
