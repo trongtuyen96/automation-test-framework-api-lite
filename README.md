@@ -174,7 +174,7 @@ Format: mvn clean test -DtestSuiteName="path to execution file"
 
 2. Executing script inside a test step.
 
-3. Combinations of mandaotry and optional query parameters to generate set of combined test cases.
+3. Combinations of mandatory and optional query parameters to generate set of combined test cases.
 
 4. Data-driven test cases with parameterized data table.
 
@@ -182,7 +182,7 @@ Format: mvn clean test -DtestSuiteName="path to execution file"
 
 6. Store process variables when executing the test cases at runtime.
 
-7. Load multiple json data file with one test class.
+7. Load multiple json data files with one test class.
 
 8. Run the specific test cases only.
 
